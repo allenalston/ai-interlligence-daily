@@ -7,7 +7,7 @@ title: 最新日报列表
 
 <ul>
 {% for file in site.pages %}
-  {% if file.path contains 'daily-reports/' %}
+  {% if file.path contains 'news/' %}
     <li><a href="{{ site.baseurl }}{{ file.url }}">{{ file.name | replace: ".md", "" }}</a></li>
   {% endif %}
 {% endfor %}

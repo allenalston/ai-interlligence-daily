@@ -8,7 +8,7 @@ title: 最新日报列表
 <ul>
 {% assign sorted_pages = site.pages | sort: 'path' | reversed %}
 {% for file in sorted_pages %}
-  {% if file.path contains 'daily-reports/' %}
+  {% if file.path contains 'news/' %}
     <li><a href="{{ site.baseurl }}{{ file.url }}">{{ file.name | replace: ".md", "" }}</a></li>
   {% endif %}
 {% endfor %}

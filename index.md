@@ -1,12 +1,17 @@
 ---
 layout: home
-title: AI 行业情报站
+title: 最新日报列表
 ---
 
 # 📅 历史日报存档
 
-{% for file in site.static_files %}
+<ul>
+{% for file in site.pages %}
   {% if file.path contains 'daily-reports/' %}
-    * [{{ file.basename }}]({{ file.path }})
+    <li><a href="{{ site.baseurl }}{{ file.url }}">{{ file.name | replace: ".md", "" }}</a></li>
   {% endif %}
 {% endfor %}
+</ul>
+
+---
+*提示：以上列表由 Jekyll 自动根据文件夹内容生成。*
